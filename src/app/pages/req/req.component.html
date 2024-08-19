@@ -1,0 +1,215 @@
+<div class="main-container pt-5">
+  <div class="logo-container">
+    <img
+      src="https://smartpayment.com.mx/wp-content/uploads/2024/02/Recurso-3-1024x385.png"
+      alt="Logo"
+      class="logo"
+    />
+  </div>
+  <div class="container my-5">
+    <div class="custom-container px-5">
+      <h1 class="mb-4 text-dark">
+        Requerimiento de Prueba Técnica - Frontend Engineer
+      </h1>
+
+      <h2 class="text-secondary">Objetivo:</h2>
+      <p class="lead">
+        Desarrollar una aplicación Angular que consuma el endpoint RESTful
+        proporcionado y muestre los datos en una lista.
+      </p>
+
+      <h3 class="text-secondary mt-4">Descripción del Proyecto:</h3>
+
+      <ol class="list-group list-group-numbered mt-4 px-3">
+        <li>
+          <strong>Buenas prácticas:</strong>
+          <ul>
+            <li>Utiliza las mejores prácticas al desarrollar esta prueba.</li>
+            <li>
+              La prueba incluye la interfaz <code>User</code> para usarla en los
+              servicios y donde sea necesario.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Uso del Shell para generar los componentes:</strong>
+          <ul>
+            <li>
+              El Shell se encuentra en la parte inferior derecha del navegador;
+              aquí podrás ejecutar comandos <code>ng</code> para generar los
+              componentes.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Uso de Endpoints:</strong>
+          <ul>
+            <li>
+              <strong>URL Base:</strong>
+              <code>https://jsonplaceholder.typicode.com</code>
+            </li>
+            <li>
+              <strong>Endpoint para listar usuarios:</strong>
+              <code>&dollar;&lbrace;BASE-URL&rbrace;/users</code>
+            </li>
+            <li>
+              <strong>Endpoint para detalles de usuario:</strong>
+              <code
+                >&dollar;&lbrace;BASE-URL&rbrace;/users/&dollar;&lbrace;id&rbrace;</code
+              >
+            </li>
+            <li><strong>Método:</strong> GET</li>
+            <li>
+              <strong>Descripción:</strong> Devuelve una lista de usuarios y
+              detalles de usuarios en formato JSON.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Requisitos de Implementación:</strong>
+          <ul>
+            <li>
+              <strong>Servicio:</strong>
+              <ul>
+                <li>
+                  Crea un servicio <code>ApiService</code> para realizar
+                  solicitudes HTTP y retornar los datos.
+                </li>
+                <li>
+                  Genera un método para retornar los usuarios usando
+                  <code>/users</code>.
+                </li>
+                <li>
+                  Genera un método para retornar el detalle del usuario usando
+                  <code>/users/1</code>.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Componente UserList:</strong>
+              <ul>
+                <li>
+                  Crea un componente <code>UserListComponent</code> que consuma
+                  el servicio y muestre la lista de usuarios.
+                </li>
+                <li>
+                  Cada usuario debe mostrar al menos el nombre
+                  (<code>name</code>) y el correo (<code>email</code>).
+                </li>
+                <li>
+                  Cada usuario tendrá un botón de "Ver" que redireccionará al
+                  detalle del usuario de acuerdo a su identificador
+                  (<code>id</code>).
+                </li>
+                <li>
+                  Incorpora el componente <code>FilterUser</code> que retornará
+                  una cadena para generar una función de filtrado de usuarios
+                  (los requisitos de este componente se describen más adelante).
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Componente UserDetailList:</strong>
+              <ul>
+                <li>
+                  Crea un componente
+                  <code>UserDetailListComponent</code> que consuma el servicio y
+                  muestre los detalles de usuario por ID.
+                </li>
+                <li>
+                  Cada detalle de usuario debe mostrar al menos el ID del
+                  usuario (<code>userId</code>), el nombre (<code>name</code>),
+                  el usuario (<code>username</code>) y el teléfono
+                  (<code>phone</code>).
+                </li>
+                <li>
+                  Este componente deberá tener la capacidad de regresar al
+                  listado de usuarios con un botón de "Regresar".
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Componente FilterUser:</strong>
+              <ul>
+                <li>
+                  Crea un componente <code>FilterUserComponent</code> que deberá
+                  renderizarse dentro de <code>UserList</code> sobre el listado
+                  de usuarios.
+                </li>
+                <li>
+                  Este componente deberá contener un <code>input</code> con un
+                  evento <code>onSearch</code> que retornará una cadena para
+                  filtrar los usuarios; la lógica de filtrado estará dentro del
+                  componente <code>UserList</code>.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Lógica de Filtrado de Usuarios en UserList:</strong>
+              <ul>
+                <li>
+                  Crea una función con la cadena que retornará
+                  <code>filterUser</code> mediante un <code>EventEmitter</code>.
+                </li>
+                <li>
+                  Esta función deberá filtrar los usuarios a mostrar en el
+                  render.
+                </li>
+                <li>
+                  La lógica de esta función es a tu consideración para resolver
+                  esta problemática.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Estilos:</strong>
+          <ul>
+            <li>
+              El proyecto ya cuenta con los estilos de
+              <code>Bootstrap</code> previamente cargados para que puedas hacer
+              uso de esta librería.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Instrucciones para la Entrega:</strong>
+          <ul>
+            <li>
+              <strong>Tiempo:</strong> Tendrás
+              <code>1 hora con 30 minutos</code> para completar la prueba.
+            </li>
+            <li>
+              <strong>Prueba:</strong> Asegúrate de que el proyecto funcione
+              correctamente en el entorno CodeInterview.io.
+            </li>
+            <li>
+              <strong>Restricciones:</strong> Queda prohibido el uso de
+              Inteligencia Artificial (IA) para resolver esta prueba (incluye
+              chats, extensiones en VSCode y el uso de copilots).
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Criterios de Evaluación:</strong>
+          <ul>
+            <li>Correcta implementación del servicio y los componentes.</li>
+            <li>Buenas prácticas al codificar.</li>
+            <li>Claridad y calidad del código.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>

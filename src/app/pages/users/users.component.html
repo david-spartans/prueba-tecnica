@@ -1,0 +1,19 @@
+<div class="main-container pt-5">
+  <div class="px-5 pt-2">
+    <app-filter (onSearch)="filterByName($event)"></app-filter>
+  </div>
+  <div class="custom-container p-5 mx-5 my-3">
+    @for (user of users; track user.id) {
+    <ul class="list-group mb-3">
+      <li class="list-group-item card">
+        <div class="d-flex justify-content-between align-items-center">
+          {{ user.name }}
+          <button type="button" class="btn btn-link" (click)="goTo(user.id)">
+            Ver
+          </button>
+        </div>
+      </li>
+    </ul>
+    } @empty { Sin registros }
+  </div>
+</div>

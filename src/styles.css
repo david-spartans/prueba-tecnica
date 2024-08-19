@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.main-container {
+  background: linear-gradient(to top right, #b422ab, #fc8621);
+  min-height: 200vh;
+  padding-bottom: 5rem;
+}
+@media (max-width: 768px) {
+  .main-container {
+    min-height: 310vh;
+  }
+}
+@media (max-width: 480px) {
+  .main-container {
+    min-height: 410vh;
+  }
+}
+
+.custom-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+}
